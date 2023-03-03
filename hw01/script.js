@@ -3,7 +3,7 @@ const FIRST = 15.678, SECOND = 123.965, THIRD = 90.2345;
 const STR1 = "Найбільше число: " + Math.max(FIRST, SECOND, THIRD) + " ";
 const STR2 = "Найменше число: " + Math.min(FIRST, SECOND, THIRD) + " ";
 console.log(STR1);
-console.log(STR2);
+console.log(STR2); 
 
 const SUM = FIRST + SECOND + THIRD;
 const STR3 = `Сума товарів: ${SUM} `;
@@ -30,7 +30,7 @@ const STR9 = `Середнє значення: ${(SUM / 3).toFixed(2)} `;
 console.log(STR9);
 
 // 2
-const DISCOUNT = Math.floor(Math.random() * (SUM + 1));
+const DISCOUNT = Math.round(((Math.floor((Math.random() * (SUM + 1)))) / 100) * SUM);
 const STR10 = `Знижка: ${DISCOUNT} `;
 const STR11 = `Сума зі знижкою: ${(SUM - DISCOUNT).toFixed(2)} `;
 console.log(STR10);
