@@ -111,7 +111,7 @@ document.writeln(`<p>Знайти моду масива: ${getModaForCycle(arr)}
 document.writeln(`<p>Знайти середнє масива: ${getAverage(arr)}</p>`);
 document.writeln(`<p>Знайти медіану масива: ${getMediane(arr)}</p>`);
 document.writeln(`<p>Знайти непарні числа масива: ${filterEvenNumbers(arr)}</p>`);
-document.writeln(`<p>Знайти кількість елементів більше 0 в масиві: ${getModaForCycle(arr)}</p>`);
+document.writeln(`<p>Знайти кількість елементів більше 0 в масиві: ${countPositiveNumbers(arr)}</p>`);
 document.writeln(`<p>Знайти елементи масива кратні 5: ${getDividedByFive(arr)}</p>`);
 
 const text = "No fucking way this shit works"
