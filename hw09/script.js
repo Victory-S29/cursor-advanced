@@ -2,6 +2,7 @@ function generateBlocks(){
     for(let i = 0; i < 5; i ++){
         let row = document.createElement("div");
         row.style.display = "flex";
+        row.style.justifyContent = "center";
         document.body.appendChild(row);
         for(let j = 0; j < 5; j ++){
             let block = document.createElement("div");
