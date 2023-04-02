@@ -1,0 +1,42 @@
+body{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8qG02mYkva3uFgojQZiWI13EliEdVkvJG2g&usqp=CAU);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.keys {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+kbd {
+    display: block;
+    font-size: 4rem;
+}
+
+.key {
+    border: 3px solid rgb(17, 0, 0);
+    border-radius: 0.5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    color: rgb(17, 0, 0);
+    background: rgba(46, 0, 0, 0.5);
+}
+
+.sound {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: rgb(17, 0, 0);
+}
+
+.chosen{
+    transform: scale(1.05);
+    border-color: rgb(17, 0, 0);
+    box-shadow: 0 0 1rem rgb(17, 0, 0);
+}
