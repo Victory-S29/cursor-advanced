@@ -27,7 +27,7 @@ body{
     border-radius: 3%;
 }
 
-.elem-div{
+.elem-div, .planet-div{
     position: relative;
     width: 40%;
     display: flex;
@@ -37,9 +37,14 @@ body{
     background-color: #2d3138;
     border-radius: 3%;
     margin-bottom: 5%;
+    cursor: pointer;
 }
- 
-.elem-img{
+
+.planet-div{
+    cursor: auto;
+}
+
+.elem-img, .main-img{
     width: 95%;
     min-height: 300px;
 }
@@ -54,7 +59,8 @@ body{
     margin-top: 3%;
     text-align: center;
 }
-.elem-p{
+
+.elem-p, .planet-p{
     color: #feda4a;
     font-family: 'Pathway Gothic One', sans-serif;
     font-size: 200%;
@@ -65,7 +71,7 @@ body{
     text-align: center;
 }
 
-#characters-main{
+.btn{
     background-color: #feda4a;
     height: 75px;
     border-radius: 6%;
@@ -86,4 +92,69 @@ body{
     .elem-div{
         width: 100%;
     }
+}
+
+.main-div{
+    position: relative;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3%;
+    background-color: #2d3138;
+    border-radius: 3%;
+    margin-bottom: 5%;
+}
+
+.main-h2{
+    color: #feda4a;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 600%;
+    font-weight: 600;
+    letter-spacing: 6px;
+    line-height: 150%;
+    text-align: center;
+    margin: 4%;
+}
+.form-title{
+    color: #ffffff;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 150%;
+    font-weight: 600;
+    letter-spacing: 4px;
+    line-height: 120%;
+}
+input{
+    width: 40%;
+    height:60px;
+    font-weight: 600;
+    font-size: 200%;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+    margin-bottom: 3%;
+}
+.main-text{
+    text-align: left;
+}
+.main-p span{
+    color: #feda4a;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 150%;
+    font-weight: 600;
+    letter-spacing: 4px;
+    line-height: 120%;
+}
+
+.main-p{
+    color: #ffffff;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 200%;
+    font-weight:500;
+    letter-spacing: 3px;
+    line-height: 120%;
+    margin-top: 1%;
 }

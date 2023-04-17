@@ -8,7 +8,8 @@ const film3 = "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3d7e300
 
 const filmsImg = [film4, film5, film6, film1, film2, film3];
 const link = "https://swapi.dev/api/films/";
-
+const planetLink = "https://swapi.dev/api/planets/";
+ 
 async function getJSON(link){
     let info = await fetch(link);
     let resJson = await info.json();
@@ -16,21 +17,25 @@ async function getJSON(link){
 }
 
 let mainJSON = getJSON(link);
+let planetJSON = getJSON(planetLink);
 getFilm(mainJSON);
 
-async function getFilm(resJson){
+function getFilm(resJson){
+    document.getElementById("film-title").innerText = "Click film to see characters"
     resJson.then((film) => {
         for (let i = 0; i < film.results.length; i++){
             filmRender(film.results[i].title, filmsImg[i], i + 1)
         }
     })
+    let planetBTN = `<button class= "btn" id = "planet-main">Planets page</button>`;
+    document.body.innerHTML += planetBTN;
 }
 
 function filmRender(name, link, id){
     let filmStr = `
     <div class = "elem-div" id =${id}>
     <img class = "elem-img" src="${link}" alt="${name}">
-    <h2 class = "elem-h2">${name}</p>
+    <p class = "elem-h2">${name}</p>
     </div>`
     document.getElementById("content").innerHTML += filmStr;
 }
@@ -46,8 +51,29 @@ function characterRender(name, birth, gender){
     document.getElementById("content").innerHTML += characterStr;
 }
 
+function getPlanets(planetJSON){
+    document.getElementById("film-title").innerText = ""
+    document.getElementById("content").innerHTML = "";
+    planetJSON.then((planet) => {
+        for (let i = 0; i < planet.results.length; i++){
+            planetRender(planet.results[i].name, planet.results[i].terrain, i);
+        }
+    })
+    let mainBTN = `<button class= "btn" id = "characters-main">Main page</button>`;
+    document.body.innerHTML += mainBTN;
+}
 
-async function getCharacters(mainJSON, filmNumb){
+function planetRender(name, terrain, id){
+    let planetStr = `
+    <div class = "planet-div" id =planet-${id}>
+    <p class = "planet-p">${name}</p>
+    <p class = "planet-p">${terrain}</p>
+    </div>`
+    document.getElementById("content").innerHTML += planetStr;
+}
+
+function getCharacters(mainJSON, filmNumb){
+    document.getElementById("film-title").innerText = ""
     document.getElementById("content").innerHTML = "";
     mainJSON.then(film => {
         film.results[filmNumb].characters.forEach(element => {
@@ -58,10 +84,10 @@ async function getCharacters(mainJSON, filmNumb){
                 document.getElementById("content").innerHTML += errStr;
             });
         })
-        let mainBTN = `<button id = "characters-main">Main page</button>`;
+        let mainBTN = `<button class= "btn" id = "characters-main">Main page</button>`;
         document.body.innerHTML += mainBTN;
-    })
- 
+    });
+    document.getElementById("planet-main").remove();
 }
  
 document.addEventListener('click', function(event) {
@@ -73,8 +99,58 @@ document.addEventListener('click', function(event) {
         }
     }
     if ((event.target.id).toString() === "characters-main"){
+        document.getElementById("film-title").innerText = ""
         document.getElementById("content").innerHTML = "";
         getFilm(mainJSON);
         document.getElementById("characters-main").remove();
     }
+
+    if ((event.target.id).toString() === "planet-main"){
+        document.getElementById("film-title").innerText = ""
+        document.getElementById("content").innerHTML = "";
+        getPlanets(planetJSON);
+        document.getElementById("planet-main").remove();
+    }
+
+    if ((event.target.id).toString() === "film-show"){
+        if (['1', '2', '3', '4', '5', '6'].includes(filmValue)) {
+            document.getElementById("film-title").innerText = ""
+            filmInfo(mainJSON, Number(filmValue) - 1);
+            document.getElementById("characters-main").remove();
+        } else {
+            alert("Incorrect value in form");
+        }
+    }   
 })
+
+const filmInput = document.getElementById("film-input");
+const inputSubmit = document.getElementById("film-show");
+let filmValue = "";
+
+filmInput.addEventListener("input", (e) => {
+        filmValue = e.target.value;
+    }
+)
+ 
+function filmInfo(resJson, i){
+    resJson.then((film) => {
+            filmInfoRender(film.results[i].title, filmsImg[i], film.results[i].director, film.results[i].producer, film.results[i].opening_crawl)
+    })
+}
+
+function filmInfoRender(title, filmsImg, director, producer, opening_crawl){
+    document.getElementById("planet-main").remove();
+    let filmStr = `
+    <div class = "main-div">
+    <h2 class = "main-h2">${title}</h2>
+    <img class = "main-img" src="${filmsImg}" alt="p">
+        <div class = "main-text"> 
+            <p class = "main-p"><span>Director:</span> ${director}</p>
+            <p class = "main-p"><span>Producer:</span> ${producer}</p>
+            <p class = "main-p"><span>Opening Crawl:</span> ${opening_crawl}</p>
+        </div>
+    </div>`
+    document.getElementById("content").innerHTML = filmStr;
+    let mainBTN = `<button class= "btn" id = "characters-main">Main page</button>`;
+    document.body.innerHTML += mainBTN;
+}
