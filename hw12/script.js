@@ -1,5 +1,5 @@
 
-const film4 = "https://static.wikia.nocookie.net/listofdeaths/images/b/b5/A_New_Hope_poster.jpg/revision/latest/scale-to-width-down/300?cb=20211105092556";
+const film4 = "https://cdn.shopify.com/s/files/1/0043/8144/2141/products/IS_2a24ef2e-f8ca-4a2f-92bb-b0bf773e1f88.jpg?v=1645837528";
 const film5 = "https://s3.amazonaws.com/nightjarprod/content/uploads/sites/192/2022/04/21120853/k2J0GbxnuWJARxLHa2vAyO77qRX.jpg";
 const film6 = "https://upload.wikimedia.org/wikipedia/uk/thumb/b/b2/ReturnOfTheJediPoster1983.jpg/200px-ReturnOfTheJediPoster1983.jpg";
 const film1 = "https://upload.wikimedia.org/wikipedia/en/4/40/Star_Wars_Phantom_Menace_poster.jpg";
@@ -73,8 +73,6 @@ function planetRender(name, terrain, id){
 }
 
 function getCharacters(mainJSON, filmNumb){
-    document.getElementById("film-title").innerText = ""
-    document.getElementById("content").innerHTML = "";
     mainJSON.then(film => {
         film.results[filmNumb].characters.forEach(element => {
             fetch(element).then(res => res.json()).then((character) => {
@@ -87,51 +85,92 @@ function getCharacters(mainJSON, filmNumb){
         let mainBTN = `<button class= "btn" id = "characters-main">Main page</button>`;
         document.body.innerHTML += mainBTN;
     });
-    document.getElementById("planet-main").remove();
 }
  
+// film-show - to one film
+// planet-main - to planets 
+// characters-main - to main
+function showBtns(main, onefilm, character, planets){
+    if (main){
+        document.getElementById("characters-main").remove();
+        document.getElementById("film-title").innerText = "";
+        document.getElementById("content").innerHTML = "";
+    }
+    if (onefilm){
+        document.getElementById("film-title").innerText = "";
+        if(document.getElementById("planet-main")){document.getElementById("planet-main").remove();};
+        document.getElementById("content").innerHTML = "";
+        const elementsToRemove = document.querySelectorAll('#characters-main');
+        console.log("elementsToRemove" , elementsToRemove)
+        if(elementsToRemove.length > 0){document.getElementById("characters-main").remove();};
+    }
+    if (character){
+        document.getElementById("film-title").innerText = "";
+        document.getElementById("content").innerHTML = "";
+        if(document.getElementById("planet-main")){document.getElementById("planet-main").remove();};
+    }
+    if (planets){
+        document.getElementById("film-title").innerText = "";
+        document.getElementById("content").innerHTML = "";
+        if(document.getElementById("planet-main")){document.getElementById("planet-main").remove();};
+    }
+}
+
 document.addEventListener('click', function(event) {
     let pressDiv = (event.target.id).toString();
-    let pressDivElement = (event.target.parentElement.id).toString() ;
     for (let i = 0; i < 6; i++){    
-        if (pressDiv === `${i + 1}` || pressDivElement === `${i + 1}`){
+        if (pressDiv === `${i + 1}` || 
+            (event.target.parentElement.id).toString()  === `${i + 1}`){
+            showBtns(false, false, true, false)
             getCharacters(mainJSON, i);
         }
     }
+
     if ((event.target.id).toString() === "characters-main"){
-        document.getElementById("film-title").innerText = ""
-        document.getElementById("content").innerHTML = "";
+        showBtns(true, false, false, false)
         getFilm(mainJSON);
-        document.getElementById("characters-main").remove();
     }
 
     if ((event.target.id).toString() === "planet-main"){
-        document.getElementById("film-title").innerText = ""
-        document.getElementById("content").innerHTML = "";
+        showBtns(false, false, false, true)
         getPlanets(planetJSON);
-        document.getElementById("planet-main").remove();
     }
 
     if ((event.target.id).toString() === "film-show"){
-        if (['1', '2', '3', '4', '5', '6'].includes(filmValue)) {
-            document.getElementById("film-title").innerText = ""
+        event.preventDefault();
+        let filmValue = numberOfFilm;
+        console.log(filmValue);
+        if (filmValue && [1, 2, 3, 4, 5, 6].includes(Number(filmValue))) {
+            showBtns(false, true, false, false);
             filmInfo(mainJSON, Number(filmValue) - 1);
-            document.getElementById("characters-main").remove();
         } else {
             alert("Incorrect value in form");
         }
-    }   
+        form.reset();
+    }
 })
 
 const filmInput = document.getElementById("film-input");
 const inputSubmit = document.getElementById("film-show");
-let filmValue = "";
+let numberOfFilm;
 
-filmInput.addEventListener("input", (e) => {
-        filmValue = e.target.value;
-    }
-)
- 
+document.addEventListener("input", e => {
+    numberOfFilm = e.target.value;
+})
+
+// inputSubmit.addEventListener("click", e => {
+//     e.preventDefault();
+//     let filmValue = numberOfFilm;
+//     console.log(filmValue);
+//     if (filmValue && [1, 2, 3, 4, 5, 6].includes(Number(filmValue))) {
+//         showBtns(false, true, false, false);
+//         filmInfo(mainJSON, Number(filmValue) - 1);
+//     } else {
+//         alert("Incorrect value in form");
+//     }
+//     form.reset();
+// }) 
+
 function filmInfo(resJson, i){
     resJson.then((film) => {
             filmInfoRender(film.results[i].title, filmsImg[i], film.results[i].director, film.results[i].producer, film.results[i].opening_crawl)
@@ -139,7 +178,6 @@ function filmInfo(resJson, i){
 }
 
 function filmInfoRender(title, filmsImg, director, producer, opening_crawl){
-    document.getElementById("planet-main").remove();
     let filmStr = `
     <div class = "main-div">
     <h2 class = "main-h2">${title}</h2>
@@ -154,3 +192,5 @@ function filmInfoRender(title, filmsImg, director, producer, opening_crawl){
     let mainBTN = `<button class= "btn" id = "characters-main">Main page</button>`;
     document.body.innerHTML += mainBTN;
 }
+
+ 
