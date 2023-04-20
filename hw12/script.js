@@ -12,22 +12,21 @@ const planetLink = "https://swapi.dev/api/planets/";
 let mainJSON = getJSON(link);
 let planetJSON = getJSON(planetLink);
 
+async function getJSON(link){
+    let info = await fetch(link);
+    let resJson = await info.json();
+    return resJson;
+}
+
 const filmInput = document.getElementById("film-input");
 const inputSubmit = document.getElementById("film-show");
 let numberOfFilm;
 
 getFilm(mainJSON);
 
-
 charactersPhoto = {
     "1" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlWOey035wnlxX7w0AzG8s0rQ70cwaT0k1JA&usqp=CAU"
     ///........................
-}
-
-async function getJSON(link){
-    let info = await fetch(link);
-    let resJson = await info.json();
-    return resJson;
 }
 
 function getFilm(resJson){
