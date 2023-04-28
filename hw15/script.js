@@ -50,8 +50,9 @@ console.log(idGenerator.next().value)
 // npm run build_webpack
 
 
-// npm install --save-dev @babel/core @babel/cli @babel/preset-env
+// npm install --save-dev @babel/core
 // babel.config.json
-// ./node_modules/.bin/babel src --out-dir lib
+// ./node_modules/.bin/babel dist --out-dir lib
+
 // npm install style-loader --save-dev
 // npm install --save-dev css-loader
