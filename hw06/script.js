@@ -1,4 +1,4 @@
-export const students = [{
+const students = [{
     name: "Tanya",
     course: 3,
     subjects: {
@@ -24,7 +24,7 @@ export const students = [{
     }
     }];
 
-export function getSubjects(student){
+function getSubjects(student){
     const subj = [];
     for (let key in student.subjects){
         subj.push(key);
@@ -37,73 +37,73 @@ export function getSubjects(student){
     return res;
 }
 
-// function getAverageMark(student){
+function getAverageMark(student){
 
-//     const marks = [];
-//     for (let key in student.subjects){
-//         marks.push(student.subjects[key]);
-//     }
+    const marks = [];
+    for (let key in student.subjects){
+        marks.push(student.subjects[key]);
+    }
  
-//     const ressArr = [].concat(...marks);
+    const ressArr = [].concat(...marks);
 
-//     const sum = ressArr.reduce(
-//         (prevValue, item)=>{
-//             const res = prevValue + item;
-//             return res;
-//         }, 0
-//     )
+    const sum = ressArr.reduce(
+        (prevValue, item)=>{
+            const res = prevValue + item;
+            return res;
+        }, 0
+    )
 
-//     const avg =  sum / ressArr.length;
-//     return avg.toFixed(2);
-// }
+    const avg =  sum / ressArr.length;
+    return avg.toFixed(2);
+}
 
-// function getStudentInfo(student, avgMark){
-//     const avg = avgMark;
-//     const studentInfo = {};
-//     studentInfo.course = student.course;
-//     studentInfo.name = student.name;
-//     studentInfo.averageMark = avg;
-//     return studentInfo;
-// }
+function getStudentInfo(student, avgMark){
+    const avg = avgMark;
+    const studentInfo = {};
+    studentInfo.course = student.course;
+    studentInfo.name = student.name;
+    studentInfo.averageMark = avg;
+    return studentInfo;
+}
 
-// function getStudentsNames(students){
-//     const namesArr = [];
-//     for (let i = 0; i < students.length; i++){
-//         namesArr.push(students[i].name);
-//     }
-//     namesArr.sort();
-//     return namesArr;
-// }
+function getStudentsNames(students){
+    const namesArr = [];
+    for (let i = 0; i < students.length; i++){
+        namesArr.push(students[i].name);
+    }
+    namesArr.sort();
+    return namesArr;
+}
 
-// function getBestStudent(students){
-//     const marks = [];
-//     for (let i = 0; i < students.length; i++){
-//         marks.push(parseFloat(getAverageMark(students[i])));
-//     }
-//     const greatestMarkIndex = marks.indexOf(Math.max(...marks));
+function getBestStudent(students){
+    const marks = [];
+    for (let i = 0; i < students.length; i++){
+        marks.push(parseFloat(getAverageMark(students[i])));
+    }
+    const greatestMarkIndex = marks.indexOf(Math.max(...marks));
 
-//     return students[greatestMarkIndex].name;
-// }
+    return students[greatestMarkIndex].name;
+}
 
-// function calculateWordLetters(word){
-//     const letters = {};
-//     for (let i = 0; i < word.length; i++){
-//        const letter = word[i];
-//         if (letters[letter]){
-//             letters[letter]++;
-//         }
-//         else{
-//             letters[letter] = 1;
-//         }
-//     }
-//     return letters;
-// }
+function calculateWordLetters(word){
+    const letters = {};
+    for (let i = 0; i < word.length; i++){
+       const letter = word[i];
+        if (letters[letter]){
+            letters[letter]++;
+        }
+        else{
+            letters[letter] = 1;
+        }
+    }
+    return letters;
+}
 
-// let firstStudent = students[0];
+let firstStudent = students[0];
 
-// console.log(getSubjects(firstStudent));
-// console.log(getAverageMark(firstStudent));
-// console.log(getStudentInfo(firstStudent, getAverageMark(firstStudent)));
-// console.log(getStudentsNames(students));
-// console.log(getBestStudent(students));
-// console.log(calculateWordLetters("assdffggg"));
+console.log(getSubjects(firstStudent));
+console.log(getAverageMark(firstStudent));
+console.log(getStudentInfo(firstStudent, getAverageMark(firstStudent)));
+console.log(getStudentsNames(students));
+console.log(getBestStudent(students));
+console.log(calculateWordLetters("assdffggg"));
