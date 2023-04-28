@@ -1,5 +1,5 @@
 import {getMaxDigit} from '../hw03/script.js';
-import {students, studentsPairs} from '../hw04/script.js';
+import {studentsPairs} from '../hw04/script.js';
 import {getArray} from '../hw05/script.js';
 import {students as students2, getSubjects } from '../hw06/script.js';
 import {getMiddleTaxes, ukraine } from '../hw07/script.js';
@@ -8,6 +8,7 @@ import {generateBlocks} from '../hw09/script.js';
 import {getRandomChinese} from '../hw11/script.js';
 import {infiniteGenerator} from '../hw13/script.js';
 
+const students = ["Олександр", "Ігор", "Олена", "Іра", "Олексій", "Світлана"];
 console.log("hw03", getMaxDigit(1234));
 console.log("hw04", studentsPairs(students));
 console.log("hw05", getArray(10, 0, 10));
