@@ -40,3 +40,7 @@ kbd {
     border-color: rgb(17, 0, 0);
     box-shadow: 0 0 1rem rgb(17, 0, 0);
 }
+
+h1{
+    color: rgb(45, 255, 45);
+}

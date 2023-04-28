@@ -7,7 +7,7 @@
     "example": "examples"
   },
   "scripts": {
-    "build_webpack":"webpack build",
+    "build_webpack": "webpack build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,7 +22,12 @@
   },
   "homepage": "https://github.com/Victory-S29/cursor-advanced#readme",
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "css-loader": "^6.7.3",
+    "http-server": "^14.1.1",
+    "style-loader": "^3.3.2"
   },
   "dependencies": {
     "ansi-styles": "^4.3.0",

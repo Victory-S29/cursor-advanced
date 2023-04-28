@@ -1,3 +1,5 @@
+import css from "../hw10/styles/main.css";
+
 import {getMaxDigit} from '../hw03/script.js';
 import {studentsPairs} from '../hw04/script.js';
 import {getArray} from '../hw05/script.js';
@@ -20,8 +22,8 @@ student.getInfo();
 
 console.log("hw09 - generateBlocks");
 generateBlocks();
-console.log("hw11 - getRandomChinese");
-getRandomChinese(4);
+// console.log("hw11 - getRandomChinese");
+// getRandomChinese(4);
 console.log("hw13 - infiniteGenerator");
 const idGenerator = infiniteGenerator();
 console.log(idGenerator.next().value)
@@ -46,3 +48,10 @@ console.log(idGenerator.next().value)
 //     "test": "echo \"Error: no test specified\" && exit 1"
 //   },
 // npm run build_webpack
+
+
+// npm install --save-dev @babel/core @babel/cli @babel/preset-env
+// babel.config.json
+// ./node_modules/.bin/babel src --out-dir lib
+// npm install style-loader --save-dev
+// npm install --save-dev css-loader
