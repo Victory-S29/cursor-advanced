@@ -1,4 +1,5 @@
 import css from "../hw10/styles/main.css";
+import img from '../hw15/img.jpg';
 
 import {getMaxDigit} from '../hw03/script.js';
 import {studentsPairs} from '../hw04/script.js';
@@ -31,6 +32,12 @@ console.log(idGenerator.next().value)
 console.log(idGenerator.next().value)
 console.log(idGenerator.next().value)
 
+let str = `
+<div>
+<img src="${img}" alt="img">
+</div>`
+document.body.innerHTML += str;
+
 // npm init -y
 // npm install http-server --save-dev
 // npx http-server
@@ -54,5 +61,6 @@ console.log(idGenerator.next().value)
 // babel.config.json
 // ./node_modules/.bin/babel dist --out-dir lib
 
+// npm install file-loader --save-dev
 // npm install style-loader --save-dev
 // npm install --save-dev css-loader
