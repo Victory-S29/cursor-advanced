@@ -1,12 +1,12 @@
-import {getMaxDigit} from '../hw03/script';
-import {students, studentsPairs} from '../hw04/script';
-import {getArray} from '../hw05/script';
-import {students as students2, getSubjects } from '../hw06/script';
-import {getMiddleTaxes, ukraine } from '../hw07/script';
-import {Student} from '../hw08/script';
-import {generateBlocks} from '../hw09/script';
-import {getRandomChinese} from '../hw11/script';
-import {infiniteGenerator} from '../hw13/script';
+import {getMaxDigit} from '../hw03/script.js';
+import {students, studentsPairs} from '../hw04/script.js';
+import {getArray} from '../hw05/script.js';
+import {students as students2, getSubjects } from '../hw06/script.js';
+import {getMiddleTaxes, ukraine } from '../hw07/script.js';
+import {Student} from '../hw08/script.js';
+import {generateBlocks} from '../hw09/script.js';
+import {getRandomChinese} from '../hw11/script.js';
+import {infiniteGenerator} from '../hw13/script.js';
 
 console.log("hw03", getMaxDigit(1234));
 console.log("hw04", studentsPairs(students));
