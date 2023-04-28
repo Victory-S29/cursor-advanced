@@ -29,7 +29,20 @@ console.log(idGenerator.next().value)
 console.log(idGenerator.next().value)
 console.log(idGenerator.next().value)
 
-
 // npm init -y
 // npm install http-server --save-dev
 // npx http-server
+
+
+//webpack.config.js
+// module.exports = {
+//     entry:'./hw15/script.js'
+// }
+// npm init
+// npm i webpack
+// npm i webpack-cli
+// "scripts": {
+//     "build_webpack":"webpack build",
+//     "test": "echo \"Error: no test specified\" && exit 1"
+//   },
+// npm run build_webpack
