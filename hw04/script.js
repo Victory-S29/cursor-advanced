@@ -52,6 +52,7 @@ output(studentsMark);
 document.writeln("<p>Пари з оцінками</p>");
 output(finalArray);
 
+
 function output (array){
     document.write(`<br>`)
     for (let i = 0; i < array.length; i++){
