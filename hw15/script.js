@@ -14,7 +14,6 @@ console.log("hw05", getArray(10, 0, 10));
 console.log("hw06", getSubjects(students2));
 console.log("hw07", getMiddleTaxes.call(ukraine));
 console.log("hw08 - Student");
-
 let student = new Student("Вищої Школи Психотерапії м.Одеса", 1, "Остап Родоманський Бендер");
 student.getInfo();
 
@@ -22,15 +21,12 @@ console.log("hw09 - generateBlocks");
 generateBlocks();
 console.log("hw11 - getRandomChinese");
 getRandomChinese(4);
- 
 console.log("hw13 - infiniteGenerator");
 const idGenerator = infiniteGenerator();
 console.log(idGenerator.next().value)
 console.log(idGenerator.next().value)
 console.log(idGenerator.next().value)
 console.log(idGenerator.next().value)
-
-
 
 
 // npm init -y
