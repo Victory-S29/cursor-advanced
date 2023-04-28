@@ -1,4 +1,4 @@
-class Student{
+export class Student{
     #marks;
     constructor(university, course, fullName){
         this.university = university;
@@ -51,44 +51,44 @@ class Student{
     }
 }
 
-class BudgetStudent extends Student {
-    constructor(university, course, fullName){
-        super(university, course, fullName);
-        this.scholarship = setInterval(this.getScholarship.bind(this), 30000);
-    }
+// class BudgetStudent extends Student {
+//     constructor(university, course, fullName){
+//         super(university, course, fullName);
+//         this.scholarship = setInterval(this.getScholarship.bind(this), 30000);
+//     }
 
-    getScholarship() {
-        if(this.dismissed === false){ 
-            if(this.averageMark >= 4) { 
-                console.log("Ви отримали 1400 грн. стипендії");
-            } else {
-                console.log("Ви не отримуєте стипендію");
-            }
-        } else {
-            console.log("Не є студентом");
-        }
-    }
-}
+//     getScholarship() {
+//         if(this.dismissed === false){ 
+//             if(this.averageMark >= 4) { 
+//                 console.log("Ви отримали 1400 грн. стипендії");
+//             } else {
+//                 console.log("Ви не отримуєте стипендію");
+//             }
+//         } else {
+//             console.log("Не є студентом");
+//         }
+//     }
+// }
  
-console.log("Частина 1");
-let student = new Student("Вищої Школи Психотерапії м.Одеса", 1, "Остап Родоманський Бендер");
-student.getInfo();
-console.log(student.getMarks);
+// console.log("Частина 1");
+// let student = new Student("Вищої Школи Психотерапії м.Одеса", 1, "Остап Родоманський Бендер");
+// student.getInfo();
+// console.log(student.getMarks);
  
-student.setMarks = 5;
-console.log(student.getMarks);
+// student.setMarks = 5;
+// console.log(student.getMarks);
 
-console.log("Середня оцінка: " + student.getAverageMark());
+// console.log("Середня оцінка: " + student.getAverageMark());
 
-student.dismiss()
-console.log("Якщо студента відраховано: " + student.getAverageMark());
+// student.dismiss()
+// console.log("Якщо студента відраховано: " + student.getAverageMark());
 
-student.recover()
-console.log("Якщо студента поновлено: " + student.getMarks);
+// student.recover()
+// console.log("Якщо студента поновлено: " + student.getMarks);
 
 
-//===============================================================
-console.log("Частина 2");
-let secondStudent = new BudgetStudent("Київського Національного Університету м.Київ", 1, "Олена Родоманська Бендер");
-secondStudent.getInfo();
-console.log(secondStudent.getAverageMark());
+// //===============================================================
+// console.log("Частина 2");
+// let secondStudent = new BudgetStudent("Київського Національного Університету м.Київ", 1, "Олена Родоманська Бендер");
+// secondStudent.getInfo();
+// console.log(secondStudent.getAverageMark());

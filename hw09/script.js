@@ -1,4 +1,4 @@
-function generateBlocks(){ 
+export function generateBlocks(){ 
     for(let i = 0; i < 5; i ++){
         let row = document.createElement("div");
         row.style.display = "flex";
@@ -20,17 +20,17 @@ function generateBlocks(){
     }
 }
 
-function generateBlocksInterval(){
-    for(let i = 0; i < 5; i++){
-        for(let j = 0; j < 5; j++){
-           let currentBlock = document.getElementById(`block${j}${i}`)
-           const color = Math.round(Math.random() * (255 - 0));
-           const color1 = Math.round(Math.random() * (255 - 0));
-           const color2 = Math.round(Math.random() * (255 - 0));
-           currentBlock.style.backgroundColor = `rgb(${color}, ${color1}, ${color2})`;
-        }
-    }
-}
+// function generateBlocksInterval(){
+//     for(let i = 0; i < 5; i++){
+//         for(let j = 0; j < 5; j++){
+//            let currentBlock = document.getElementById(`block${j}${i}`)
+//            const color = Math.round(Math.random() * (255 - 0));
+//            const color1 = Math.round(Math.random() * (255 - 0));
+//            const color2 = Math.round(Math.random() * (255 - 0));
+//            currentBlock.style.backgroundColor = `rgb(${color}, ${color1}, ${color2})`;
+//         }
+//     }
+// }
 
-generateBlocks();
-setInterval(generateBlocksInterval, 1000);
+// generateBlocks();
+// setInterval(generateBlocksInterval, 1000);

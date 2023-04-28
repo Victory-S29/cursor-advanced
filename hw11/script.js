@@ -1,4 +1,4 @@
-async function getRandomChinese(lenght){
+export async function getRandomChinese(lenght){
     let i = 0;
     let str = '';
     while (i < lenght){
@@ -10,4 +10,4 @@ async function getRandomChinese(lenght){
     document.writeln(`<h1>${str}</h1>`);
 }
 
-getRandomChinese(4);
+// getRandomChinese(4);
