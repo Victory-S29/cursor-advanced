@@ -1,6 +1,5 @@
 import React from 'react';
 import like from './imgs/like.png'
-import comments from './imgs/chat2.png'
 import download from './imgs/download.png'
 import retweet from './imgs/retweet.png'
 
@@ -37,7 +36,7 @@ function Post(){
                 <p className='reaction-p'>146</p>
             </div>
             <div className='reaction-section--part'>
-                <img className='reaction-img' src={comments} alt='comments'></img>
+                <img className='reaction-img' src= 'https://cdn2.iconfinder.com/data/icons/medical-healthcare-26/28/Chat-2-512.png' alt='comments'></img>
                 <p className='reaction-p'>482</p>
             </div>
             <div className='reaction-section--part'>
