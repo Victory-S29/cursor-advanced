@@ -29,16 +29,16 @@ function Post(){
         <img className='post-img' src= {post.image} alt='post'></img>
         <div className='reaction-section'>
             <div className='reaction-section--part'>
-                <img className='reaction-img' src={comments} alt='comments'></img>
-                <p className='reaction-p'>482</p>
+                <img className='reaction-img' src={like} alt='like'></img>
+                <p className='reaction-p'>887</p>
             </div>
             <div className='reaction-section--part'>
                 <img className='reaction-img' src={retweet} alt='retweet'></img>
                 <p className='reaction-p'>146</p>
             </div>
             <div className='reaction-section--part'>
-                <img className='reaction-img' src={like} alt='like'></img>
-                <p className='reaction-p'>887</p>
+                <img className='reaction-img' src={comments} alt='comments'></img>
+                <p className='reaction-p'>482</p>
             </div>
             <div className='reaction-section--part'>
                 <img className='reaction-img' src={download} alt='download'></img>
