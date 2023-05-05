@@ -2,7 +2,7 @@
   "files": {
     "main.css": "/static/css/main.ece8dff9.css",
     "main.js": "/static/js/main.68114439.js",
-    "static/media/chat2.png": "/static/media/chat2.7bcca6fb9f9c4aad4394.png",
+    "static/media/chat2.png": "./static/media/chat2.7bcca6fb9f9c4aad4394.png",
     "index.html": "/index.html",
     "main.ece8dff9.css.map": "/static/css/main.ece8dff9.css.map",
     "main.68114439.js.map": "/static/js/main.68114439.js.map"
