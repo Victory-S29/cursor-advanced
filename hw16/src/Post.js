@@ -1,6 +1,6 @@
 import React from 'react';
 import like from './imgs/like.png'
-import comments from './imgs/comments.png'
+import comments from './imgs/chat2.png'
 import download from './imgs/download.png'
 import retweet from './imgs/retweet.png'
 
