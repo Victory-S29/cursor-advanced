@@ -60,7 +60,7 @@ function Contacts() {
   // щоб затримки на 1 не було
   useEffect(
     () => {
-      setContact(contacts.filter(contact => {
+      const sortByInput = contacts.filter(contact => {
         const values = Object.values(contact);
         for (let i = 0; i < values.length; i++) {
           if (typeof values[i] === "string" && values[i].includes(search)) {
@@ -68,24 +68,20 @@ function Contacts() {
           }
         }
         return false
-      }))
-    },
-    [search]
-  )
-
-  useEffect(
-    () => {
-      const newArr = contacts.filter((contact) => {
+      })
+      const sortByGender = contacts.filter((contact) => {
         if ((checkBox[0] && contact.gender === "male") ||
           (checkBox[1] && contact.gender === "female") ||
           (checkBox[2] && !contact.gender))
           return true;
       })
-      setContact(newArr);
+      const finalArr = sortByInput.filter(element => sortByGender.includes(element));
+      setContact(finalArr);
     },
-    [checkBox]
+    [search, checkBox]
   )
 
+  
   function handleSearchChange(e) {
     setSearch(e.target.value)
   }
