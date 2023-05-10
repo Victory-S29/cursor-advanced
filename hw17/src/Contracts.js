@@ -74,6 +74,7 @@ function Contacts() {
           (checkBox[1] && contact.gender === "female") ||
           (checkBox[2] && !contact.gender))
           return true;
+          return false;
       })
       const finalArr = sortByInput.filter(element => sortByGender.includes(element));
       setContact(finalArr);
