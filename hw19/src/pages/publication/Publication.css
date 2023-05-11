@@ -1,0 +1,62 @@
+.post{
+    background-color: rgb(255, 255, 255);
+    padding: 1%;
+    width: 60%;
+    margin: 10px auto;
+    border: 1px solid #100c1f;
+    border-radius: 3%;
+    margin-top: 1%;
+    padding: 10px;
+  }
+  .main-title{
+    display: flex;
+    width: 100%;
+    gap: 2%;
+    align-items: center;
+  }
+  .bio-img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+  .bio-nickname, .post-date{
+    color: #100c1f;
+  }
+  .post-content{
+    margin: 5px calc(50px + 2%);
+  }
+  .post-img{
+    width: 80%;
+    margin: 15px calc(50px + 2%);
+    border-radius: 2%;
+  }
+  .reaction-section{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .reaction-section--part{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #100c1f;
+  }
+  .reaction-img{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    .main-title{
+      flex-wrap: wrap;
+    }
+    .post-img{
+      margin: 0;
+    }
+    .reaction-section{
+      display: block;
+    }
+    .post-content{
+        margin: 5px 0;
+      }
+  }
