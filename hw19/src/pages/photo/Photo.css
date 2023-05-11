@@ -1,0 +1,50 @@
+.photo-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photo-card{
+    position: relative;
+    width: 40%;
+    min-height: 70vh;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #100c1f;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.photo-card--main-photo{
+    object-fit: cover;
+    width: 100%;
+}
+
+.photo-card--main-text{
+    color: #100c1f;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 5px;
+}
+
+.photo-card--reaction-section{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    width: 30%;
+}
+
+.photo-card--reaction-img{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .photo-card{ 
+        width: 60%;
+        height: 40vh;
+    }
+  }

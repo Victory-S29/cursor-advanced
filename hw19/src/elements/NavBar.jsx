@@ -12,6 +12,9 @@ const NavBar = () => {
                     <Link to="/publication" className='navigation--link'>Publication</Link>
                 </li>
                 <li>
+                    <Link to="/photo" className='navigation--link'>Photos</Link>
+                </li>
+                <li>
                     <Link to="/profile" className='navigation--link'>Profile</Link>
                 </li>
             </ul>
