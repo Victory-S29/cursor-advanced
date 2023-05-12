@@ -47,4 +47,8 @@
         width: 60%;
         height: 40vh;
     }
+    .photo-card{
+        min-height: 60vh;
+ 
+    }
   }
