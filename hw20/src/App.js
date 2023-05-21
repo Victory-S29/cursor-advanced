@@ -9,6 +9,7 @@ function App() {
       <style>
         {`@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');`}
       </style>
+      <Link to="/" className='form-links-text'>Sign in</Link>
       <Routes>
         <Route index element={<SignIn />} />
         <Route path="sign-up" element={<SignUp />} />
