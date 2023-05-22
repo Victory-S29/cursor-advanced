@@ -27,8 +27,8 @@ const SignIn = () => {
             setIsFormValid(true);
         }
     }, []);
- 
- 
+
+
     const validateEmail = (email) => {
         const emailRegex = /^[A-Za-z0-9]{3,}@[A-Za-z0-9]{2,}\.[A-Za-z]{2,}$/;
         const isValid = emailRegex.test(email);
@@ -82,52 +82,54 @@ const SignIn = () => {
 
     return (
         <FormStyle>
+        <div className='sign-In-title'> 
             <ImgStyle><img className="form-img" src={img} alt='lock'></img></ImgStyle>
             <h1 className='form-title'>Sign in</h1>
-            <InputStyle
+            </div>
+            <div className='input-section'>
+                <InputStyle
+                    value={email}
+                    onChange={e => {
+                        setEmail(e.target.value)
+                        setData(e.target.type === 'checkbox' ? e.target.checked :
+                            e.target.value, e.target.name)
+                    }}
+                    type="text"
+                    placeholder="Email Address *"
+                    name="Email">
+                </InputStyle>
+                <InputStyle type="password" placeholder="Password *" name="Password"
+                    value={password}
+                    onChange={e => {
+                        setPassword(e.target.value)
+                        setData(e.target.type === 'checkbox' ? e.target.checked :
+                            e.target.value, e.target.name)
+                    }}>
+                </InputStyle>
+                <label className='label-text'>
+                    <div className="checkBox-format" >
+                        <InputStyle
+                            value={rememberMe}
+                            onChange={e => {
 
-                value={email}
-                onChange={e => {
-                    setEmail(e.target.value)
-                    setData(e.target.type === 'checkbox' ? e.target.checked :
-                        e.target.value, e.target.name)
-                }}
-                type="text"
-                placeholder="Email Address *"
-                name="Email">
-            </InputStyle>
-            <InputStyle type="password" placeholder="Password *" name="Password"
-                value={password}
-                onChange={e => {
-                    setPassword(e.target.value)
-                    setData(e.target.type === 'checkbox' ? e.target.checked :
-                        e.target.value, e.target.name)
-                }}>
-            </InputStyle>
-            <label className='label-text'>
-                <div className="checkBox-format" >
-                    <InputStyle
-                        value={rememberMe}
-                        onChange={e => {
+                                setData(e.target.type === 'checkbox' ? e.target.checked :
+                                    e.target.value, e.target.name)
+                            }}
+                            className="checkBox-format-input" type="CheckBox" name="RememberMe"></InputStyle>
+                    </div>
+                    Remember me
+                </label>
 
-                            setData(e.target.type === 'checkbox' ? e.target.checked :
-                                e.target.value, e.target.name)
-                        }}
-                        className="checkBox-format-input" type="CheckBox" name="RememberMe"></InputStyle>
-                </div>
-                Remember me
-            </label>
-
-            <ButtonStyle className={isFormValid ? "" : "disabled"}
-                onClick={() => {
-                    if (isFormValid) {
-                        saveLoginData();
-                        alert('Login successful!');
-                    }
-                }}
-                disabled={!isFormValid}>Sign In
-            </ButtonStyle>
-
+                <ButtonStyle className={isFormValid ? "" : "disabled"}
+                    onClick={() => {
+                        if (isFormValid) {
+                            saveLoginData();
+                            alert('Login successful!');
+                        }
+                    }}
+                    disabled={!isFormValid}>Sign In
+                </ButtonStyle>
+            </div>
             <div className='form-links'>
                 <Link to="/" className='form-links-text'>Forgot password?</Link>
                 <Link to="/sign-up" className='form-links-text'>Don't have an account? Sign up</Link>

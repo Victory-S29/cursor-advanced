@@ -6,6 +6,7 @@ const InputStyle = styled.input`
     border: 1px solid white;
     padding:10px;
     border-radius:5px;
+    width:100%;
     ::placeholder {
         color: white;  
         font-family: 'Roboto', sans-serif;

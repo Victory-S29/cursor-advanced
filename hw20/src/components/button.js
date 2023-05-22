@@ -11,6 +11,7 @@ const ButtonStyle = styled.button`
     :hover{
         background: #6DCDC8;
     }
+    border-radius: 5px;
 `;
 
 export default ButtonStyle;

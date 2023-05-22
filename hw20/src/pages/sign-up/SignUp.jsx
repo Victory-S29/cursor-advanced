@@ -146,15 +146,16 @@ const SignUp = () => {
                     </div>
                     I want to receive inspiration, marketing promotions and updates via email
                 </label>
+                <ButtonStyle className={isFormValid ? "" : "disabled"}
+                    onClick={() => {
+                        if (isFormValid) {
+                            checkLoginData();
+                        }
+                    }}
+                    disabled={!isFormValid}>Sign In
+                </ButtonStyle>
             </div>
-            <ButtonStyle className={isFormValid ? "" : "disabled"}
-                 onClick={() => {
-                    if (isFormValid) {
-                        checkLoginData();
-                    }
-                }}
-                disabled={!isFormValid}>Sign In
-            </ButtonStyle>
+
             <div className='form-links'>
                 <Link to="/" className='form-links-text'>Already have an account? Sign in</Link>
             </div>

@@ -6,9 +6,9 @@ const FormStyle = styled.div`
     flex-direction:column;
     align-items:center;
     justify-content: space-evenly;
-    width:100%;
-    min-height:80vh;
-    padding:5px;
+    width:40vw;
+    min-height:90vh;
+    padding: 35px 5px;
     background: #161616;
     color: white;
     font-family: 'Roboto', sans-serif;
