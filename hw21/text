@@ -1,0 +1,39 @@
+// import React, { useState } from 'react';
+// import { useDispatch, useSelector } from 'react-redux';
+// import createUserAction from '../store/actions/post.action';
+
+// const Post = () => {
+     
+//     // const dispatch = useDispatch();
+
+//     // const onClick = () => {
+//     //     if (name?.trim()) {
+//     //     dispatch(createUserAction(
+//     //         { name } //  { name: name }
+//     //         ))
+//     //         resetData();
+//     //     } else {
+//     //         alert("you have required fields")
+//     //     }
+//     // }
+
+//     // const resetData = () => {
+//     //     setName("")
+//     // }
+//     return (
+//         <>
+//             {/* <input onChange={e => setName(e.target.value)}></input>
+//             <button onClick={onClick}>Click me</button>
+
+
+//             {users?.map(el => {
+//                 return <div key = {el.id}>
+
+//                 </div>
+//             })} */}
+//         </>
+//     );
+
+// };
+
+// export default Post;
