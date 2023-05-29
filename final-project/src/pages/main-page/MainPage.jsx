@@ -10,16 +10,6 @@ const MainPage = () => {
 
     return (
         <Fragment>
-            <div className='cube-div'>
-                <div className="cube"></div>
-                <div className="cube"></div>
-                <div className="cube"></div>
-                <div className="cube"></div>
-                <div className="cube"></div>
-                <div className="cube"></div>
-                <div className="cube"></div>
-                <div className="cube"></div>
-            </div>
             <h1 className='main-title'>{text[language].name}</h1>
             <main>
                 <p className='main-bio'>{text[language].bio}</p>
