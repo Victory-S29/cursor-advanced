@@ -34,3 +34,9 @@ section {
 		text-shadow: 2px 2px 20px #ff0000;
 	}
 }
+
+@media (max-width: 768px) {
+	.text-shadow {
+		font-size: 40px;
+	}
+}

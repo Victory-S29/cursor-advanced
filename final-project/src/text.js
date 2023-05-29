@@ -11,8 +11,8 @@ const text = {
         }, {
             text: "Зв'язатися",
             link: "Contact",
-        }]
-
+        }],
+        errorText: "Натисніть, щоб почати",
     },
     en: {
         name: "Viktoriia Sanina",
@@ -26,7 +26,8 @@ const text = {
         }, {
             text: "Contact me",
             link: "Contact",
-        }]
+        }],
+        errorText: "Click here to open",
     },
 }
 

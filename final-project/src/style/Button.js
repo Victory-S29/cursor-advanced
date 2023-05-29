@@ -1,5 +1,5 @@
-import styled from "styled-components";
- 
+import styled, { css } from 'styled-components';
+
 
 const Button = styled.button`
     background-color:white;
@@ -12,6 +12,11 @@ const Button = styled.button`
     min-width:30px;
     min-height:30px;
     border: 1px solid rgba(255, 0, 0, 0.185);
+
+ 
+    @media (max-width: 768px) {
+        position:absolute;
+  }
 `
 
 export default Button;
