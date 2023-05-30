@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import "./ProjectDetails.css"
-
+import text from '../../text';
 const ProjectDetails = () => {
     const { projectId } = useParams();
     const language = useSelector((state) => state.lang.lang);
@@ -39,7 +39,7 @@ const ProjectDetails = () => {
                 })}
             </div>
             <div className='link-section'>
-                <Link to='/' className="GoBack">Go back</Link>
+                <Link to='/' className="GoBack">{text[language].btnText}</Link>
             </div>
         </div>
     );

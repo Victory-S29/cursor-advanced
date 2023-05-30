@@ -13,6 +13,7 @@ const text = {
             link: "Contact",
         }],
         errorText: "Натисніть, щоб почати",
+        btnText: "На головну",
     },
     en: {
         name: "Viktoriia Sanina",
@@ -28,6 +29,7 @@ const text = {
             link: "Contact",
         }],
         errorText: "Click here to open",
+        btnText: "Home",
     },
 }
 
