@@ -1,6 +1,13 @@
 :root {
     --main-theme: #050507;
+    --project-details: #12053f;
     --text-main: #ffffff;
-    --details: rgba(255, 0, 0, 0.185);
-    --hover-text: red;
+ 
+    --details: rgba(38, 0, 255, 0.185);
+    --hover-text: rgb(81, 93, 255);
+
+    --main-color: rgb(0, 17, 255);
+    --blur: #4400ff;
+
+    --gradient: #05010c;
 } 

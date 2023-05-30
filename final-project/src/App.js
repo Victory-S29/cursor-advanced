@@ -6,6 +6,7 @@ import changeLanguageAction from './store/actions/lang.action';
 import Button from './style/Button';
 import MainPage from './pages/main-page/MainPage';
 import Error from './pages/error/Error';
+import ProjectDetails from './pages/project-detail/ProjectDetails';
 
 
 function App() {
@@ -23,23 +24,15 @@ function App() {
 
   return (
     <Fragment>
-      <div className='cube-div'>
-        <div className="cube"></div>
-        <div className="cube"></div>
-        <div className="cube"></div>
-        <div className="cube"></div>
-        <div className="cube"></div>
-        <div className="cube"></div>
-        <div className="cube"></div>
-        <div className="cube"></div>
-      </div>
-
       <Button onClick={changeLanguage}>
         {lang === "en" ? "EN" : "UA"}
       </Button>
       <Routes>
         <Route index element={<MainPage />} />
         <Route path='*' element={<Error />} />
+        <Route path="projects">
+          <Route path=":projectId" element={<ProjectDetails />} />
+        </Route>
       </Routes>
     </Fragment>
   );

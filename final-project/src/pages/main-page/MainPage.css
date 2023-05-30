@@ -2,6 +2,7 @@
  
  
 .main-title{
+    margin-top: 20px;
     color: var(--text-main);
     text-align: center;
     letter-spacing: 8px;
@@ -16,6 +17,10 @@
     text-align: center; 
 }
  
+.cube-div{
+    max-width: 99vw;
+}
+
 .cube {
     position: absolute;
     top: 80vh;
@@ -39,13 +44,13 @@
     left: 75vw;
     top: 50vh;
 }
-
+ 
 .cube:nth-child(4) {
     animation-delay: 6s;
-    left: 90vw;
-    top: 10vh;
+    left: 80vw;
+    top: 20vh;
 }
-
+ 
 .cube:nth-child(5) {
     animation-delay: 8s;
     left: 10vw;
@@ -56,7 +61,7 @@
     animation-delay: 10s;
     left: 50vw;
     top: 10vh;
-}
+}  
 
 @keyframes cube {
     from {
@@ -110,11 +115,9 @@ main{
 .project--link:hover + .project--description{
     opacity: 1;
 }
- 
    
 .footer--link-ul{
     display: flex;
-    width: 100vw;
     justify-content: space-evenly;
     margin: 10% auto;
 }
@@ -150,16 +153,15 @@ main{
     }
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1400px) {
     .main-bio{
         margin: 0 auto;
         text-align: center;
     }
 
     .project--link-ul{
-        margin: 0 auto;
+        margin: 10% auto;
         text-align: center;
-        margin-top: 10%;
     }
     
     .project--link-li{

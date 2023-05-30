@@ -1,0 +1,101 @@
+@import url("../../style/variables.css");
+ 
+.project-page{
+    background: linear-gradient(-45deg, var(--main-theme),  var(--gradient),  var(--main-theme),  var(--main-theme));
+	background-size: 400% 400%;
+	animation: gradient 6s linear infinite;
+	height: 100vh;
+}
+
+.project-title{
+    color: var(--text-main);
+    text-align: center;
+    letter-spacing: 8px;
+    font-size: 90px;
+}
+
+.project-description{
+    text-align: center;
+    color: var(--text-main);
+    width: 70%;
+    margin: 2% auto;
+    font-size: 25px;
+    letter-spacing: 1px;
+    padding: 10px 40px;
+    border-top: 3px double var(--blur);
+    border-bottom: 3px double var(--blur);
+    border-radius: 2rem;
+ 
+}
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin: 5% auto;
+    font-size: 20px;
+}
+  
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid var(--text-main);
+}
+
+.project-technologies{
+    color: var(--text-main);
+}
+
+.project-description--title{
+    color: var(--text-main);
+}
+
+.gallery-section{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.project-image{
+    width: 45vw;
+    border: 2px solid var(--blur);
+    border-radius:2rem ;
+    margin: 1% auto;
+}
+ 
+.link-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.GoBack{
+    display: flex;
+    border: 2px solid var(--blur);
+    margin: 2% auto;
+    text-decoration: none;
+    font-size: 25px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 2vh 2vw;
+    font-weight: 900;
+    border-radius: 1rem;
+    color: var(--blur);
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@media (max-width: 768px) {
+    .project-image{
+        width: 70%;
+    }
+}

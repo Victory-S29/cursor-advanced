@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@400;600;700&display=swap");
- 
+@import "../../style/variables.css";
  
 section {
 	display: flex;
@@ -10,12 +10,12 @@ section {
 	text-transform: uppercase;
 }
 
-.text-shadow {
+.text-shadow { 
     font-size: 70px;
 	text-transform: uppercase;
-	-webkit-text-stroke: #ff2c2c;
+	-webkit-text-stroke:  var(--blur);
 	-webkit-text-stroke-width: 1px;
-	text-shadow: 2px 2px 10px  #ff0000;
+	text-shadow: 2px 2px 10px  var(--main-color);
 	transition: all 0.5s ease-in-out;
 	text-align: center;
 	letter-spacing: 0.2em;
@@ -27,11 +27,11 @@ section {
 @keyframes flicker {
 	0% {
 		opacity: 0.5;
-		text-shadow: 2px 2px 10px #ff0000;
+		text-shadow: 2px 2px 10px var(--main-color);
 	}
 	100% {
 		opacity: 1;
-		text-shadow: 2px 2px 20px #ff0000;
+		text-shadow: 2px 2px 20px var(--main-color);
 	}
 }
 
